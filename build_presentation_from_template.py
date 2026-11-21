@@ -856,34 +856,27 @@ for idx, (title, desc, theme) in enumerate(enhancements):
     populate_bullet(tf, desc, "Roadmap Item", c, size=10, space_before=4)
 
 # ==========================================
-# SLIDE 20: CONCLUSION & REFERENCES
+# SLIDE 20: CONCLUSION & PROJECT SUMMARY
 # ==========================================
 slide20 = prs.slides.add_slide(blank_layout)
-apply_slide_base(slide20, "Conclusion and References", "Summary of Achievements and Academic Citations", 20)
+apply_slide_base(slide20, "Conclusion and Project Summary", "Core Accomplishments, Operational Impact & Academic Takeaways", 20)
 
-tf_l, c_l = add_template_card(slide20, 731520, 1143000, 5166360, 5100000, "Project Summary & Key Takeaways", "blue")
+tf_l, c_l = add_template_card(slide20, 731520, 1143000, 5166360, 3680000, "Core Technical Accomplishments", "blue")
 populate_bullet(tf_l, "Successfully engineered and verified an end-to-end ALPR pipeline using classical OpenCV and Tesseract OCR.", "End-to-End ALPR", c_l)
 populate_bullet(tf_l, "Diagnosed and resolved critical OCR failure modes by enforcing Page Segmentation Mode 7 (--psm 7).", "PSM 7 Resolution", c_l)
 populate_bullet(tf_l, "Achieved 100% character recognition accuracy on Indian vehicle registration 'HR 26 DA 2330' in 198 ms on CPU.", "High Accuracy & Speed", c_l)
 populate_bullet(tf_l, "Implemented resilient dual-mode execution supporting system CLI and embedded tesserocr C++ fallback.", "Dual-Mode Resilience", c_l)
+populate_bullet(tf_l, "Established automated regression coverage with unit test suite (test_main.py) and non-blocking headless execution.", "Automated Testing", c_l)
 
-tf_r, c_r = add_template_card(slide20, 6291072, 1143000, 5166360, 5100000, "Academic Bibliography & Citations", "teal")
-refs = [
-    "[1] Canny, J. (1986). 'A Computational Approach to Edge Detection.' IEEE TPAMI, 8(6), pp. 679–698.",
-    "[2] Suzuki, S., & Abe, K. (1985). 'Topological Structural Analysis by Border Following.' CVGIP, 30(1), pp. 32–46.",
-    "[3] Douglas, D. H., & Peucker, T. K. (1973). 'Algorithms for Polygonal Line Representation.' Cartographica, 10(2), pp. 112–122.",
-    "[4] Tomasi, C., & Manduchi, R. (1998). 'Bilateral Filtering for Gray and Color Images.' IEEE ICCV, pp. 839–846.",
-    "[5] Smith, R. (2007). 'An Overview of the Tesseract OCR Engine.' IEEE ICDAR, pp. 629–633.",
-    "[6] Bradski, G. (2000). 'The OpenCV Library.' Dr. Dobb's Journal, 25(11), pp. 120–125.",
-    "[7] Du, S. et al. (2013). 'Automatic License Plate Recognition (ALPR): A State-of-the-Art Review.' IEEE TCSVT, 23(2), pp. 311–325."
-]
-for r in refs:
-    p = tf_r.add_paragraph() if tf_r.paragraphs[0].text else tf_r.paragraphs[0]
-    p.text = r
-    p.font.name = "Segoe UI"
-    p.font.size = Pt(8.5)
-    p.font.color.rgb = COLOR_TEXT_DARK
-    p.space_before = Pt(4)
+tf_r, c_r = add_template_card(slide20, 6291072, 1143000, 5166360, 3680000, "Operational Impact & Academic Significance", "teal")
+populate_bullet(tf_r, "Eliminates reliance on heavy, power-hungry GPUs and external cloud APIs; fully operable on low-cost edge IPCs.", "Edge Deployment Ready", c_r)
+populate_bullet(tf_r, "Unlike black-box neural networks, every intermediate step (Sobel, Canny, PolyDP, Bilateral) is mathematically explainable.", "White-Box Explainability", c_r)
+populate_bullet(tf_r, "Clean separation of concerns with modularized functions (recognize_license_plate, run_ocr) and strict boundary guards.", "Software Engineering Rigor", c_r)
+populate_bullet(tf_r, "Provides an extensible, high-throughput foundation for smart city tolling, commercial parking, and campus security.", "Smart City Scalability", c_r)
+
+# Bottom Callout Card
+tf_b, c_b = add_template_card(slide20, 731520, 4860000, 10728959, 1420000, "Key Project Takeaway", "blue")
+populate_bullet(tf_b, "Proves that disciplined computer vision pre-processing and targeted OCR tuning achieve production-grade vehicle identification without demanding costly deep learning accelerators or continuous cloud connectivity.", "Core Engineering Finding", c_b, size=11, space_before=2)
 
 prs.save(pptx_path)
 print(f"Successfully generated template-styled 20-slide presentation at {pptx_path}")
