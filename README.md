@@ -75,7 +75,6 @@ All tests verify:
 
 ```
 NLP_Project/
-├── Day_20.pptx          # Original presentation & tutorial materials
 ├── main.py              # Main license plate recognition script
 ├── test_main.py         # Automated pytest test suite
 ├── requirements.txt     # Python dependencies
