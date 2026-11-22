@@ -144,6 +144,10 @@ Run the application:
 python main.py
 ```
 
+```bash
+python main.py --headless
+```
+
 Follow the application's input instructions to process a vehicle image.
 
 ## Testing
