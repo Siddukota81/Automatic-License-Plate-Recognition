@@ -158,6 +158,14 @@ Run the automated test suite:
 pytest -v
 ```
 
+## Test an Andhra Pradesh Plate Directly
+
+To see how an Andhra Pradesh plate (e.g., Kurnool AP 21 or Statewide AP 39) is resolved without needing a photo, run this one-line command:
+
+```bash
+python -c "from nlp_processor import process_registration_text, format_registration_summary; from rto_lookup import lookup_rto; n = process_registration_text('AP 21 AB 1234'); r = lookup_rto(n.entities.state_code, n.entities.rto_code); print(format_registration_summary(n, r))"
+```
+
 ## Project Deliverables
 
 The academic deliverables are available in the `documentation/` directory:
