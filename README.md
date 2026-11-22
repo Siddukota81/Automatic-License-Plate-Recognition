@@ -1,6 +1,6 @@
 # Automatic Number Plate Recognition (ANPR) System
 
-This project is part of the **30 Days AI Challenge (Day 20)** covering computer vision and optical character recognition (OCR) for vehicle license plates.
+This project covers computer vision and optical character recognition (OCR) for vehicle license plates.
 
 ---
 
