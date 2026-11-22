@@ -1,0 +1,41 @@
+state_code,rto_code,office_name,district_or_region,registration_category,historical_or_current,effective_period,source_url,verification_status
+AP,01,Adilabad RTO,Adilabad,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-01),https://parivahan.gov.in,Verified
+AP,02,Anantapur RTO,Anantapur,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,03,Tirupati / Chittoor RTO,Tirupati / Chittoor,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,04,Kadapa RTO,YSR Kadapa,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,05,Kakinada RTO,Kakinada,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,06,Rajahmundry RTO,East Godavari,Zonal / District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,07,Guntur RTO,Guntur,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,08,Guntur RTC / Additional,Guntur,Special / Additional Transport RTO,Historical / Category Specific,1989-2019,https://aptransport.org,Verified
+AP,09,Hyderabad Central (Khairtabad),Hyderabad,Capital / Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-09),https://parivahan.gov.in,Verified
+AP,10,Hyderabad North (Secunderabad),Hyderabad,Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-10),https://parivahan.gov.in,Verified
+AP,11,Hyderabad East (Malakpet),Hyderabad,Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-11),https://parivahan.gov.in,Verified
+AP,12,Hyderabad South (Bahadurpura),Hyderabad,Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-12),https://parivahan.gov.in,Verified
+AP,13,Hyderabad West (Mehdipatnam),Hyderabad,Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-13),https://parivahan.gov.in,Verified
+AP,14,Karimnagar RTO,Karimnagar,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-14),https://parivahan.gov.in,Verified
+AP,15,Karimnagar / Jagtial Unit,Karimnagar / Jagtial,Unit Office / Additional RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-15),https://parivahan.gov.in,Verified
+AP,16,Vijayawada Urban RTO,NTR District / Krishna,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,17,Machilipatnam RTO,Krishna,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,18,Vijayawada Rural RTO,NTR District / Krishna,Sub-RTO / Rural Office,Current,1989-Present,https://aptransport.org,Verified
+AP,19,Nandigama Unit Office,NTR District,Unit Office / Sub-RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,20,Khammam RTO,Khammam,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-20),https://parivahan.gov.in,Verified
+AP,21,Kurnool RTO,Kurnool,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,22,Mahabubnagar RTO,Mahabubnagar,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-22),https://parivahan.gov.in,Verified
+AP,23,Sangareddy / Medak RTO,Medak / Sangareddy,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-23),https://parivahan.gov.in,Verified
+AP,24,Nalgonda RTO,Nalgonda,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-24),https://parivahan.gov.in,Verified
+AP,25,Nizamabad RTO,Nizamabad,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-25),https://parivahan.gov.in,Verified
+AP,26,Nellore RTO,Sri Potti Sriramulu Nellore,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,27,Ongole RTO,Prakasam,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,28,Ranga Reddy North,Ranga Reddy,Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-28),https://parivahan.gov.in,Verified
+AP,29,Ranga Reddy South,Ranga Reddy,Zonal RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-29),https://parivahan.gov.in,Verified
+AP,30,Srikakulam RTO,Srikakulam,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,31,Visakhapatnam City RTO,Visakhapatnam,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,32,Visakhapatnam Rural RTO,Visakhapatnam,Sub-RTO / Rural Office,Current,1989-Present,https://aptransport.org,Verified
+AP,33,Gajuwaka RTO,Visakhapatnam,Zonal RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,34,Anakapalli RTO,Anakapalli / Visakhapatnam,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,35,Vizianagaram RTO,Vizianagaram,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,36,Warangal RTO,Warangal,District RTO,Historical (Transferred to Telangana),1989-2014 (Now TS/TG-36),https://parivahan.gov.in,Verified
+AP,37,Eluru RTO,Eluru,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,38,Bhimavaram RTO,West Godavari,District RTO,Current,1989-Present,https://aptransport.org,Verified
+AP,39,Statewide Unified Registration Series,Andhra Pradesh (All Districts),Statewide Non-Transport Unified Series,Current (Statewide Series),2019-Present (G.O.Ms.No. 34),https://aptransport.org,Verified
+AP,40,Statewide Transport / Commercial Series,Andhra Pradesh (All Districts),Statewide Transport / Public Service Series,Current (Statewide Series),2020-Present,https://aptransport.org,Verified

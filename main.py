@@ -1,7 +1,12 @@
 import os
 import sys
+from pathlib import Path
 import cv2
 import numpy as np
+
+# Import NLP normalization and Andhra Pradesh RTO extraction modules
+from nlp_processor import process_registration_text, format_registration_summary, ProcessedRegistration
+from rto_lookup import lookup_rto, RTOLookupResult
 
 # Configure OCR: support pytesseract if tesseract.exe is present, with seamless fallback to tesserocr
 tess_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
@@ -121,11 +126,15 @@ def recognize_license_plate(image_path='car1.JPG', show_gui=True):
 
     if license_plate is None:
         print("[Warning] No 4-corner contour found for license plate.")
+        empty_nlp = process_registration_text("")
         return {
             'text': '',
             'bbox': None,
             'plate_image': None,
-            'annotated_image': image
+            'annotated_image': image,
+            'nlp_result': empty_nlp,
+            'rto_result': None,
+            'formatted_output': format_registration_summary(empty_nlp, None),
         }
 
     # 6. Thresholding
@@ -138,21 +147,31 @@ def recognize_license_plate(image_path='car1.JPG', show_gui=True):
 
     # 8. Text Recognition
     text = run_ocr(license_plate)
-    print("License Plate :", text)
+    print("License Plate OCR Raw Output:", text)
 
-    # 9. Draw License Plate rectangle and write the Text
+    # 9. NLP Text Processing & Andhra Pradesh Regional Information Extraction
+    nlp_result = process_registration_text(text)
+    rto_result = None
+    if nlp_result.entities.state_code:
+        rto_result = lookup_rto(nlp_result.entities.state_code, nlp_result.entities.rto_code)
+
+    formatted_summary = format_registration_summary(nlp_result, rto_result)
+    print("\n" + formatted_summary + "\n")
+
+    # 10. Draw License Plate rectangle and write the Text
     annotated_image = image.copy()
     annotated_image = cv2.rectangle(annotated_image, (x, y), (x + w, y + h), (0, 0, 255), 3)
 
-    # Keep text coordinates inside visible bounds
+    # Keep text coordinates inside visible bounds (display normalized/corrected string if available)
+    display_text = nlp_result.corrected_text if nlp_result.corrected_text else text
     text_x = max(10, x - 50)
     text_y = max(30, y - 10)
     annotated_image = cv2.putText(
-        annotated_image, text, (text_x, text_y),
+        annotated_image, display_text, (text_x, text_y),
         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA
     )
 
-    # 10. Save results to disk
+    # 11. Save results to disk
     cv2.imwrite("output_plate.png", license_plate)
     cv2.imwrite("output_result.png", annotated_image)
     print("[Success] Saved 'output_plate.png' and 'output_result.png'")
@@ -166,7 +185,10 @@ def recognize_license_plate(image_path='car1.JPG', show_gui=True):
         'text': text,
         'bbox': (x, y, w, h),
         'plate_image': license_plate,
-        'annotated_image': annotated_image
+        'annotated_image': annotated_image,
+        'nlp_result': nlp_result,
+        'rto_result': rto_result,
+        'formatted_output': formatted_summary,
     }
 
 

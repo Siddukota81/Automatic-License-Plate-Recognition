@@ -4,7 +4,6 @@ __pycache__/
 .pytest_cache/
 template_HUGE_HIGNN.pptx
 template_media/
-output_*.png 
-tessdata/ 
-build_*.py 
-convert_to_pdf.py 
+build_*.py
+convert_to_pdf.py
+backup_pre_ap/
